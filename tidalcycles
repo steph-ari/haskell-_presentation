@@ -8,11 +8,11 @@ d1 $ stack [
   # speed "1.1"         -- Speeds up the beat
   # delay 0.1           -- Adds delay
 
-d1.silence              -- Stops d1 channel
+d1 $ silence              -- Stops d1 channel
 
 -- Rave synth loop
 d2 $ stack [
-    sound "supermandolin*4"  -- Mandolin sound plays 4 times
+    sound "supermandolin*4",  -- Mandolin sound plays 4 times
     sound "arpy*2"            -- Arpeggiated synth plays every 2 steps
   ]
   # speed "1.3"            -- Speed up the synth
@@ -21,7 +21,7 @@ d2 $ stack [
   # room "0.5"             -- Adds room reverb
   # size "0.7"             -- Sets the size of the reverb
 
-d2.silence                 -- Stops d2 channel
+d2 $ silence                 -- Stops d2 channel
 
 -- Percussion break
 d3 $ stack [
@@ -34,7 +34,7 @@ d3 $ stack [
   # gain "0.8"          -- Reduce gain
   # delay 0.05          -- Adds delay
 
-d3.silence              -- Stops d3 channel
+d3 $ silence              -- Stops d3 channel
 
 -- Deep bassline
 d4 $ stack [
@@ -45,7 +45,7 @@ d4 $ stack [
   # speed "0.9"         -- Slowed down
   # gain "1.0"          -- Increase the volume of the bass
 
-d4.silence              -- Stops d4 channel
+d4 $ silence              -- Stops d4 channel
 
 -- Breakbeat pattern
 d5 $ stack [
@@ -57,7 +57,7 @@ d5 $ stack [
   # gain "1.1"          -- Increase gain
   # delay 0.1           -- Adds delay
 
-d5.silence              -- Stops d5 channel
+d5 $ silence              -- Stops d5 channel
 
 -- High-pitched melodic sound
 d6 $ stack [
@@ -71,6 +71,6 @@ d6 $ stack [
   # room "0.5"          -- Apply room reverb
   # size "0.7"          -- Set the size of the reverb
 
-d6.silence              --Stops d6 channel
+d6 $ silence              --Stops d6 channel
 
 hush                    -- Stops everything
